@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1419014197 source:d:\ivan\school\school prjct\b+c.c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
