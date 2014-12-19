@@ -15,11 +15,11 @@ int main()
     printf("Enter The small:");
     scanf("%s",&small);
     n = strlen(small);
-    for (c = 0 ; c < ( n - 1 ); c++)
+    for (c = 0 ; c < ( n - 1 ); c++)//Loop for sorting from small to the big
     {
         for (d = 0 ; d < n - c - 1; d++)
         {
-            if (small[d] > small[d+1]) /* For decreasing order use < */
+            if (small[d] > small[d+1]) //Looking for the larger one
             {
                 swap = small[d];
                 small[d] = small[d+1];
@@ -27,11 +27,11 @@ int main()
             }
         }
     }
-    for (c = 0 ,d = (n -1); c < (n - 1) || d>=0; c++,d--)
+    for (c = 0 ,d = (n -1); c < (n - 1) || d>=0; c++,d--)//making copy of the array
         big[c] = small[d];
     small[n]='\0';
     big[n]='\0';
-    while(b<n&&small[0]=='0')
+    while(b<n&&small[0]=='0')//Making the smallest one
     {
         if (small[b]!='0')
         {
@@ -42,9 +42,9 @@ int main()
         b++;
     }
      i = n - 1;
-    while (i >= 0)
+    while (i >= 0)//Calculating the Sum
     {
-        x = small[i] + big [i] - 2*48 + naum;
+        x = small[i] + big [i] - 2*48 + naum;//-2*48 because of the ascii of the 0
         if (x > 9)
         {
             naum = 1;
